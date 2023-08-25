@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Add a new message
+  div(class='new-message-container')
+    a(class='new-message' href='/') Go back
+  div(class='form-container')
+    form(method='POST' action='/new' class='form')
+      div(class='form-item')
+        label(for='username') Your name:
+        input(type='text' name='username' id='username')
+      div(class='form-item')
+        label(for='message') Your message:
+        input(type='text' name='message' id='message')
+      div(class='form-item')
+        button(type='submit') Add message

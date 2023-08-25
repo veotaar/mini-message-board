@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  div(class='new-message-container')
+    a(class='new-message' href='/new') new message
+  div(class='message-container')
+    each val in messages
+      div(class='message')
+        p(class='message-text') #{val.text}
+        p(class='message-secondary message-author') by #{val.user}
+        p(class='message-secondary') added: #{val.added}
